@@ -2,14 +2,15 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:weightSum="9">
 
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:layout_weight="0.05"
+        android:layout_weight="3"
         android:paddingLeft="12dp"
         android:paddingRight="12dp"
         android:paddingBottom="50dp"
@@ -48,7 +49,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:layout_weight="0.2">
+        android:layout_weight="1">
 
         <Button
             android:layout_width="wrap_content"
@@ -96,7 +97,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:layout_weight="0.2">
+        android:layout_weight="1">
 
         <Button
             android:layout_width="wrap_content"
@@ -152,7 +153,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:layout_weight="0.2">
+        android:layout_weight="1">
 
         <Button
             android:layout_width="wrap_content"
@@ -208,7 +209,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:layout_weight="0.2">
+        android:layout_weight="1">
 
         <Button
             android:layout_width="wrap_content"
@@ -264,7 +265,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:layout_weight="0.2">
+        android:layout_weight="1">
 
         <Button
             android:layout_width="wrap_content"
@@ -320,55 +321,48 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:layout_weight="0.2"
-        android:paddingBottom="6dp">
+        android:layout_weight="1"
+        android:weightSum="4">
 
         <Button
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="match_parent"
             android:text="+-"
             android:id="@+id/btn_plusminus"
-            android:layout_weight="0.3"
+            android:layout_weight="1"
             android:textColor="@color/colorAccent"
-            android:layout_marginLeft="6dp"
-            android:layout_marginRight="6dp"
             android:textSize="22dp"
             style="@style/Widget.AppCompat.Button.Borderless" />
 
         <Button
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="match_parent"
             android:text="0"
             android:id="@+id/btn_0"
-            android:layout_weight="0.3"
+            android:layout_weight="1"
             android:textColor="@color/colorAccent"
-            android:layout_marginLeft="6dp"
-            android:layout_marginRight="6dp"
             android:textSize="24dp"
             style="@style/Widget.AppCompat.Button.Borderless" />
 
         <Button
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="match_parent"
             android:text="."
             android:id="@+id/btn_dot"
-            android:layout_weight="0.3"
+            android:layout_weight="1"
             android:textColor="@color/colorAccent"
-            android:layout_marginLeft="6dp"
-            android:layout_marginRight="6dp"
             android:textSize="22dp"
             style="@style/Widget.AppCompat.Button.Borderless" />
 
         <Button
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="match_parent"
             android:text="="
             android:id="@+id/btn_equals"
-            android:layout_weight="0.3"
-            android:textColor="@color/colorAccent"
-            android:layout_marginLeft="6dp"
-            android:layout_marginRight="6dp"
-            android:textSize="26dp"
-            style="@style/Widget.AppCompat.Button.Borderless" />
+            android:layout_weight="1"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:textAppearance="@android:style/TextAppearance.Material.Widget.Button"
+            android:textSize="24sp"
+            android:textColor="@color/colorPrimary" />
     </LinearLayout>
 </LinearLayout>
