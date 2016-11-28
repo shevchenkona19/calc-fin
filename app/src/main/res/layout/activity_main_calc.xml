@@ -14,11 +14,11 @@
         android:paddingRight="12dp"
         android:paddingBottom="50dp"
         android:paddingTop="24dp"
-        android:layout_marginLeft="60dp"
-        android:layout_marginRight="60dp"
+        android:layout_marginLeft="6dp"
+        android:layout_marginRight="6dp"
         android:layout_marginBottom="6dp"
         android:layout_marginTop="12dp"
-        android:background="#124242">
+        android:background="#424242">
 
         <TextView
             android:layout_width="match_parent"
