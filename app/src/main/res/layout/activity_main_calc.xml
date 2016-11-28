@@ -262,8 +262,6 @@
             android:id="@+id/btn_1"
             android:layout_weight="0.3"
             android:textColor="@color/colorAccent"
-            android:layout_marginLeft="6dp"
-            android:layout_marginRight="6dp"
             android:textSize="30sp"
             style="@style/Widget.AppCompat.Button.Borderless" />
 
@@ -274,8 +272,6 @@
             android:id="@+id/btn_2"
             android:layout_weight="0.3"
             android:textColor="@color/colorAccent"
-            android:layout_marginLeft="6dp"
-            android:layout_marginRight="6dp"
             android:textSize="30sp"
             style="@style/Widget.AppCompat.Button.Borderless" />
 
@@ -286,8 +282,6 @@
             android:id="@+id/btn_3"
             android:layout_weight="0.3"
             android:textColor="@color/colorAccent"
-            android:layout_marginLeft="6dp"
-            android:layout_marginRight="6dp"
             android:textSize="30sp"
             style="@style/Widget.AppCompat.Button.Borderless" />
 
@@ -298,8 +292,6 @@
             android:id="@+id/btn_plus"
             android:layout_weight="0.3"
             android:textColor="@color/colorAccent"
-            android:layout_marginLeft="6dp"
-            android:layout_marginRight="6dp"
             android:textSize="30sp"
             style="@style/Widget.AppCompat.Button.Borderless" />
     </LinearLayout>
