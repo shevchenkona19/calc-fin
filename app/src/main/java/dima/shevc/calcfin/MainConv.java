@@ -96,12 +96,13 @@ public class MainConv extends AppCompatActivity implements AdapterView.OnItemSel
                         try {
                             tvConvInput.setText(tvConvInput.getText().toString().substring(0, tvConvInput.getText().toString().length() - 1));
                         } catch (Exception e){
-                            Toast.makeText(MainConv.this, e.getMessage(), Toast.LENGTH_LONG).show();
+                            e.printStackTrace();
                         }
                         convert(INPUT_SELECTED_NAME, OUTPUT_SELECTED_NAME);
                         break;
                     case R.id.btn_conv_c:
-                        tvConvInput.setText("0");
+                        tvConvInput.setText("");
+                        convert(INPUT_SELECTED_NAME, OUTPUT_SELECTED_NAME);
                         break;
                 }
             }
@@ -180,21 +181,21 @@ public class MainConv extends AppCompatActivity implements AdapterView.OnItemSel
                 try {
                     convertValue1 = Double.parseDouble(tvConvInput.getText().toString()) * 0.001;
                 } catch (Exception e){
-                    Toast.makeText(MainConv.this, e.getMessage(), Toast.LENGTH_LONG).show();
+                    e.printStackTrace();
                 }
                 break;
             case "Centimeters":
                 try {
                     convertValue1 = Double.parseDouble(tvConvInput.getText().toString()) * 0.01;
                 } catch (Exception e){
-                    Toast.makeText(MainConv.this, e.getMessage(), Toast.LENGTH_LONG).show();
+                    e.printStackTrace();
                 }
                 break;
             case "Meters":
                 try {
                     convertValue1 = Double.parseDouble(tvConvInput.getText().toString());
                 } catch (Exception e){
-                    Toast.makeText(MainConv.this, e.getMessage(), Toast.LENGTH_LONG).show();
+                    e.printStackTrace();
                 }
                 break;
         }
