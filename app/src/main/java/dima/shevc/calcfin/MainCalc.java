@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 /**
  * Created by shevc on 24.11.2016.
@@ -31,6 +32,7 @@ public class MainCalc extends AppCompatActivity{
     private Button btn_mult;
     private Button btn_c;
     private Button btn_equals;
+    private Button btn_del;
 
     private int result;
 
@@ -61,6 +63,7 @@ public class MainCalc extends AppCompatActivity{
         btn_mult = (Button) findViewById(R.id.btn_mult);
         btn_c = (Button) findViewById(R.id.btn_c);
         btn_equals = (Button) findViewById(R.id.btn_equals);
+        btn_del = (Button) findViewById(R.id.btn_del);
 
         CreateButtonListeners();
 
@@ -205,6 +208,19 @@ public class MainCalc extends AppCompatActivity{
                         tv_res.setText("");
                         tv_res_second.setText("");
                         break;
+                    case R.id.btn_del:
+                        //Кнопка Del
+                        try {
+                            if (symbol == null && str_op1 != null) {
+                                str_op1 = str_op1.substring(0, str_op1.length() - 1);
+                                tv_res.setText(str_op1);
+                            } else if (str_op1 != null && str_op2 != null) {
+                                str_op2 = str_op2.substring(0, str_op2.length() - 1);
+                                tv_res.setText(str_op2);
+                            }
+                        }catch(Exception ex){
+                            Toast.makeText(MainCalc.this, ex.getMessage(), Toast.LENGTH_SHORT).show();
+                        }
                 }
             }
         };
@@ -226,5 +242,6 @@ public class MainCalc extends AppCompatActivity{
         btn_plus.setOnClickListener(ocl_button);
         btn_equals.setOnClickListener(ocl_button);
         btn_c.setOnClickListener(ocl_button);
+        btn_del.setOnClickListener(ocl_button);
     }
 }
