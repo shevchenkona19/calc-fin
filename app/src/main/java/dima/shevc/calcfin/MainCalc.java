@@ -66,7 +66,7 @@ public class MainCalc extends AppCompatActivity{
 
         getSupportActionBar().hide();
     }
-    int Calculate(String s1, String s2, String symbol){
+    private int Calculate(String s1, String s2, String symbol){
         int op1, op2;
         op1 = Integer.parseInt(s1);
         op2 = Integer.parseInt(s2);
@@ -76,7 +76,7 @@ public class MainCalc extends AppCompatActivity{
         else if(symbol.equals("*")){result = op1 * op2;}
         return result;
     }
-    void SymbolClick(String symbol){
+    private void SymbolClick(String symbol){
         if(str_op1 != null && str_op2 == null){
             this.symbol = symbol;
             bool_op1 = true;
@@ -102,7 +102,7 @@ public class MainCalc extends AppCompatActivity{
         }
         else{}
     }
-    void NumberClick(String number){
+    private void NumberClick(String number){
         if(str_op1 == null){
             str_op1 = number;
             tv_res.setText(str_op1);
@@ -120,7 +120,7 @@ public class MainCalc extends AppCompatActivity{
             tv_res.setText(str_op2);
         }
     }
-    void CreateButtonListeners(){
+    private void CreateButtonListeners(){
         //Создаём обработчики нажатий
         View.OnClickListener ocl_button = new View.OnClickListener() {
             @Override
