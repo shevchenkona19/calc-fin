@@ -34,7 +34,7 @@ public class MainCalc extends AppCompatActivity{
     private Button btn_equals;
     private Button btn_del;
 
-    private int result;
+    private double result;
 
     private String str_op1, str_op2, str_result, symbol;
 
@@ -69,10 +69,10 @@ public class MainCalc extends AppCompatActivity{
 
         getSupportActionBar().hide();
     }
-    private int Calculate(String s1, String s2, String symbol){
-        int op1, op2;
-        op1 = Integer.parseInt(s1);
-        op2 = Integer.parseInt(s2);
+    private double Calculate(String s1, String s2, String symbol){
+        double op1, op2;
+        op1 = Double.parseDouble(s1);
+        op2 = Double.parseDouble(s2);
         if(symbol.equals("+")){result = op1 + op2;}
         else if(symbol.equals("-")){result = op1 - op2;}
         else if(symbol.equals("/")){result = op1 / op2;}
@@ -87,22 +87,23 @@ public class MainCalc extends AppCompatActivity{
             tv_res_second.setText(str_op1 + " " + symbol);
         }
         else if(str_op2 != null){
-            str_op1 = Integer.toString(Calculate(str_op1, str_op2, this.symbol));
-            str_result = str_op1;
+            str_op1 = Double.toString(Calculate(str_op1, str_op2, this.symbol));
+            //str_result = str_op1;
             str_op2 = null;
             this.symbol = symbol;
             bool_op1 = true;
-            tv_res.setText(str_result);
+            //tv_res.setText(str_result);
+            tv_res.setText(str_op1);
             tv_res_second.setText(str_op1 + " " + symbol);
         }
-        else if(str_result != null){
+        /*else if(str_result != null){
             str_op1 = str_result;
             bool_op1 = true;
             this.symbol = symbol;
             str_result = null;
             tv_res.setText("");
             tv_res_second.setText(str_op1 + " " + symbol);
-        }
+        }*/
         else{}
     }
     private void NumberClick(String number){
@@ -193,9 +194,10 @@ public class MainCalc extends AppCompatActivity{
                             str_op2 = null;
                             symbol = null;
                             bool_op1 = false;
-                            str_result = Integer.toString(result);
+                            //str_result = Double.toString(result);
+                            str_op1 = Double.toString(result);
                             //tv_res.setText(str_result);
-                            str_op1 = str_result;
+                            //str_op1 = str_result;
                             tv_res.setText(str_op1);
                             tv_res_second.setText("");
                         }
@@ -205,7 +207,7 @@ public class MainCalc extends AppCompatActivity{
                         //Кнопка C
                         str_op1 = null;
                         str_op2 = null;
-                        str_result = null;
+                        //str_result = null;
                         symbol = null;
                         bool_op1 = false;
                         tv_res.setText("");
