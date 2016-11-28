@@ -189,11 +189,14 @@ public class MainCalc extends AppCompatActivity{
                         //Кнопка =
                         if(str_op1 != null && str_op2 != null){
                             result = Calculate(str_op1, str_op2, symbol);
-                            str_op1 = null;
+                            //str_op1 = null;
                             str_op2 = null;
+                            symbol = null;
                             bool_op1 = false;
                             str_result = Integer.toString(result);
-                            tv_res.setText(str_result);
+                            //tv_res.setText(str_result);
+                            str_op1 = str_result;
+                            tv_res.setText(str_op1);
                             tv_res_second.setText("");
                         }
                         else{}
